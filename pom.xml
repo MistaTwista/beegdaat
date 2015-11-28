@@ -197,10 +197,20 @@
 						<target>1.7</target>
 					</configuration>
 				</plugin>
+				<plugin>
+					<groupId>org.scala-tools</groupId>
+					<artifactId>maven-scala-plugin</artifactId>
+					<version>2.14.2-SNAPSHOT</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 
 		<plugins>
+      <plugin>
+        <groupId>org.scala-tools</groupId>
+        <artifactId>maven-scala-plugin</artifactId>
+        <version>2.14.2-SNAPSHOT</version>
+      </plugin>
        <plugin>
           <groupId>org.scoverage</groupId>
           <artifactId>scoverage-maven-plugin</artifactId>
@@ -326,4 +336,13 @@
 			</plugin>
 		</plugins>
 	</build>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.scala-tools</groupId>
+        <artifactId>maven-scala-plugin</artifactId>
+        <version>2.14.2-SNAPSHOT</version>
+      </plugin>
+    </plugins>
+  </reporting>
 </project>
