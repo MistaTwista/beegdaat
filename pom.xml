@@ -196,7 +196,7 @@
                 <goal>testCompile</goal>
               </goals>
             </execution>
-        </executions>
+          </executions>
           <configuration>
             <args>
               <arg>-Xfatal-warnings</arg>
