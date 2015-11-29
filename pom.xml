@@ -53,6 +53,12 @@
 					<artifactId>slf4j-log4j12</artifactId>
 				</exclusion>
 			</exclusions>
+      <args>
+        <arg>-Xfatal-warnings</arg>
+        <arg>-Xlint</arg>
+        <arg>-deprecation</arg>
+        <arg>-explaintypes</arg>
+      </args>
 		</dependency>
 
 		<dependency>
