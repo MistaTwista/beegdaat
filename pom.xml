@@ -178,7 +178,6 @@
 					<groupId>net.alchim31.maven</groupId>
 					<artifactId>scala-maven-plugin</artifactId>
 					<version>3.2.1</version>
-<<<<<<< 8d136c315123fac530a0c7ede05d1b6c6438b47e
           <configuration>
             <args>
               <arg>-Xfatal-warnings</arg>
@@ -188,9 +187,6 @@
             </args>
             <recompileMode>incremental</recompileMode>
           </configuration>
-||||||| merged common ancestors
-=======
->>>>>>> Maven pom editing
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
