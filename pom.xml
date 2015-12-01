@@ -34,11 +34,10 @@
 	</repositories>
 
   <distributionManagement>
-    <repository>
-      <id>nexus</id>
-      <name>Nexus Staging Repo</name>
-      <url>http://localhost:8081/nexus/service/local/staging/deploy/maven2/</url>
-    </repository>
+    <snapshotRepository>
+      <id>mylibs</id>
+      <url>http://localhost:8081/nexus/content/repositories/mylibs</url>
+    </snapshotRepository>
   </distributionManagement>
 
 	<pluginRepositories>
