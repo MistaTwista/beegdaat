@@ -33,6 +33,14 @@
 		</repository>
 	</repositories>
 
+  <distributionManagement>
+    <repository>
+      <id>nexus</id>
+      <name>Nexus Staging Repo</name>
+      <url>http://localhost:8081/nexus/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
 	<pluginRepositories>
 		<pluginRepository>
 			<id>scala-tools.org</id>
@@ -216,16 +224,6 @@
 						<target>1.7</target>
 					</configuration>
 				</plugin>
-        <plugin>
-          <groupId>org.sonatype.plugins</groupId>
-          <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>1.6.6</version>
-          <extensions>true</extensions>
-          <configuration>
-            <serverId>nexus</serverId>
-            <nexusUrl>http://localhost:8081/nexus/</nexusUrl>
-          </configuration>
-        </plugin>
 			</plugins>
 		</pluginManagement>
 
