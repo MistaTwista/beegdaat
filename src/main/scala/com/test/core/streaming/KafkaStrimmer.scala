@@ -36,7 +36,7 @@ import org.apache.spark.SparkConf
  *
  * Example:
  *    `$ bin/run-example \
- *      org.apache.spark.examples.streaming.KafkaStrimmer zoo01,zoo02,zoo03 \
+ *      com.test.core.streaming.KafkaStrimmer zoo01,zoo02,zoo03 \
  *      my-consumer-group topic1,topic2 1`
  */
 object KafkaStrimmer {
