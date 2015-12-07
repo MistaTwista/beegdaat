@@ -21,7 +21,7 @@ package com.test.core.streaming
 import java.util.HashMap
 
 import org.apache.kafka.clients.producer.{ProducerConfig, KafkaProducer, ProducerRecord}
-
+import org.apache.log4j.Logger
 import org.apache.spark.streaming._
 import org.apache.spark.streaming.kafka._
 import org.apache.spark.SparkConf
@@ -60,8 +60,16 @@ object KafkaStrimmer {
 
     lines.print()
 
+    val Log = Logger.getLogger(KafkaStrimmer.this.getClass().getSimpleName())
+    Log.info("DEBUG info:" + zkQuorum)
+
+    sys addShutdownHook {
+      Log.info("INSIDE shut down hook:" + zkQuorum)
+      Thread.sleep(1000)
+      println("Done shutting down.")
+    }
+
     ssc.start()
     ssc.awaitTermination()
   }
 }
-// scalastyle:on println
