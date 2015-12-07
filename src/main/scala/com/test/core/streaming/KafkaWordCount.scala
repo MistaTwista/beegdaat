@@ -16,7 +16,7 @@
  */
 
 // scalastyle:off println
-package org.apache.spark.examples.streaming
+package com.test.core.streaming
 
 import java.util.HashMap
 
