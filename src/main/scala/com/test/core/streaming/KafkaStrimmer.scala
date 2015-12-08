@@ -52,8 +52,6 @@ object KafkaStrimmer {
     val sparkConf = new SparkConf().setAppName("KafkaStrimmer")
     // creating entry point for Spark Streaming
     val ssc = new StreamingContext(sparkConf, Seconds(2))
-    // shame on me... magic
-    ssc.checkpoint("checkpoint")
 
     val topicMap = topics.split(",").map((_, numThreads.toInt)).toMap
     val lines = KafkaUtils.createStream(ssc, zkQuorum, group, topicMap)
@@ -63,7 +61,7 @@ object KafkaStrimmer {
     val Log = Logger.getLogger(KafkaStrimmer.this.getClass().getSimpleName())
     Log.info("DEBUG info:" + zkQuorum)
 
-    sys addShutdownHook {
+    sys.addShutdownHook {
       Log.info("INSIDE shut down hook:" + zkQuorum)
       Thread.sleep(1000)
       println("Done shutting down.")
